@@ -1,5 +1,5 @@
-import {GET_USER_SUCCESS, GET_USER_ERROS, SET_DISPLAY} from './../action_const';
-const defaultState = {users: [], display: "block"};
+import {GET_USER_SUCCESS, GET_USER_ERROS, SET_DISPLAY, GET_SUCCES_ITEM_USER} from './../action_const';
+const defaultState = {users: [], display: "block", user: {}};
 
 export default function rootReducer(state=defaultState, action){
 
@@ -12,6 +12,9 @@ export default function rootReducer(state=defaultState, action){
             return {...state};
         case SET_DISPLAY:
             state.display = action.payload;
+            return {...state};
+        case GET_SUCCES_ITEM_USER:
+            state.user = action.payload;
             return {...state};
 
         default:

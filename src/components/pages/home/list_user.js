@@ -2,14 +2,16 @@ import Item from './item';
 import {useEffect} from 'react';
 import { useDispatch } from 'react-redux';
 import {getData} from './../../../redux/actions/index';
-import {useSelector} from 'react-redux';
+import {useSelector, useState} from 'react-redux';
+import FormUser from './form_edit';
 
 function ListUser(){
     let dispatch = useDispatch();
     let users = useSelector((state)=>state.users);
     let errMessage = useSelector((state)=>state.errMessage);
     let display = useSelector((state)=>state.display);
-    
+    let user = useSelector((state)=>state.user);
+
     if(errMessage){
         alert(errMessage);
     }
@@ -36,6 +38,7 @@ function ListUser(){
            {datas}
         </tbody>
       <div style={{display: display}} className="loader"></div>
+      <FormUser {...user}/>
     </table>
     )
 }
