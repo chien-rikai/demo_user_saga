@@ -1,0 +1,8 @@
+{
+    "users": [
+      { "id": 1, "name": "Nguyen Van A", "email": "typicode@gmail.com", "phone": "1132234343" },
+      { "id": 1, "name": "Nguyen Van B", "email": "typicode1@gmail.com", "phone": "1132234343" },
+      { "id": 1, "name": "Nguyen Van C", "email": "typicode3@gmail.com", "phone": "1132234343" },
+      { "id": 1, "name": "Nguyen Van D", "email": "typicode4@gmail.com", "phone": "1132234343" }
+    ]
+  }
